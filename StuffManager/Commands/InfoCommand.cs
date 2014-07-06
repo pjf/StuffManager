@@ -32,6 +32,7 @@ namespace StuffManager.Commands
             Console.WriteLine("{0}/{1}", mod.Author, mod.Name);
             Console.WriteLine("Name: {0}", mod.Name);
             Console.WriteLine("Author: {0}", mod.Author);
+            Console.WriteLine("URL: http://beta.kerbalstuff.com/mod/{0}", mod.Id);
             Console.WriteLine("Version: {0}", mod.Versions[0].FriendlyVersion);
             Console.WriteLine("Downloads: {0}", mod.Downloads);
             Console.WriteLine("Followers: {0}", mod.Followers);
