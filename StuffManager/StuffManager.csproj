@@ -32,6 +32,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="Commands\DownloadCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="KerbalStuff.cs" />
     <Compile Include="Package.cs" />
@@ -63,7 +64,5 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
