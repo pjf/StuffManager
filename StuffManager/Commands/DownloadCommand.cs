@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 
 namespace StuffManager.Commands
 {
@@ -23,7 +24,16 @@ namespace StuffManager.Commands
             }
             var mod = results.Single();
 
-            System.Diagnostics.Process.Start("http://beta.kerbalstuff.com" + mod.Versions.First().DownloadPaths);
+            using (WebClient client = new WebClient())
+            {
+
+                string sOutput = String.Format("{0}-{1}.zip", mod.Name, mod.Versions.First().FriendlyVersion);
+                Console.WriteLine("Downloading \"{0}\" to working directory...", sOutput);
+                Console.WriteLine("\tPlease wait ...");
+
+                client.DownloadFile("http://beta.kerbalstuff.com" + mod.Versions.First().DownloadPaths, sOutput);
+                Console.WriteLine("\nDownload completed Successfully.");
+            }
             return 0;
         }
     }
