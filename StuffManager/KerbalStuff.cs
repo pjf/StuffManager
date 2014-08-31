@@ -13,7 +13,7 @@ namespace StuffManager
         public static Package[] Search(string terms)
         {
             var request = (HttpWebRequest)WebRequest.Create(string.Format(
-                RootPath + "/search?query={0}", Uri.EscapeUriString(terms)));
+                RootPath + "/search/mod?query={0}", Uri.EscapeUriString(terms)));
             var response = request.GetResponse();
             string text;
             using (var reader = new StreamReader(response.GetResponseStream()))

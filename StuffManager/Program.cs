@@ -47,6 +47,8 @@ namespace StuffManager
                     return InfoCommand.HandleCommandLine(shifted, options);
                 case "changelog":
                     return ChangelogCommand.HandleCommandLine(shifted, options);
+                case "download":
+                    return DownloadCommand.HandleCommandLine(shifted, options);
             }
             Console.WriteLine("Command not found. Try `stuff --help`.");
             return 1;
