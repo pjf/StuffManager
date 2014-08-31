@@ -37,7 +37,6 @@ namespace StuffManager.Commands
             Console.WriteLine("Downloads: {0}", mod.Downloads);
             Console.WriteLine("Followers: {0}", mod.Followers);
             Console.WriteLine("Short Description: \n\t{0}", mod.ShortDescription);
-            //Console.WriteLine("Default Version ID: \t{0}", mod.DefaultVersionID);
             return 0;
         }
     }
