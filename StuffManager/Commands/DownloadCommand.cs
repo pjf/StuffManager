@@ -31,7 +31,7 @@ namespace StuffManager.Commands
                 Console.WriteLine("Downloading \"{0}\" to working directory...", sOutput);
                 Console.WriteLine("\tPlease wait ...");
 
-                client.DownloadFile("http://beta.kerbalstuff.com" + mod.Versions.First().DownloadPaths, sOutput);
+                client.DownloadFile(Settings.KS_ROOT + mod.Versions.First().DownloadPaths, sOutput);
                 Console.WriteLine("\nDownload completed Successfully.");
             }
             return 0;
