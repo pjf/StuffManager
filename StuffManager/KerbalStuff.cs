@@ -11,8 +11,6 @@ namespace StuffManager
 
         public static Package[] Search(string terms)
         {
-            Console.WriteLine(string.Format(
-                Settings.KS_MOD_SEARCH + "{0}", Uri.EscapeUriString(terms)));
             var request = (HttpWebRequest)WebRequest.Create(string.Format(
                 Settings.KS_MOD_SEARCH + "{0}", Uri.EscapeUriString(terms)));
             
