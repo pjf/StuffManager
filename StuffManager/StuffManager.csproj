@@ -43,6 +43,7 @@
     <Compile Include="Commands\InfoCommand.cs" />
     <Compile Include="PackageVersion.cs" />
     <Compile Include="Commands\ChangelogCommand.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
