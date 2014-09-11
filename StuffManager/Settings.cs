@@ -5,7 +5,7 @@ namespace StuffManager
     static class Settings
     {
         // The root address of KerbalStuff
-        public static String KS_ROOT = "https://beta.kerbalstuff.com";
+        public static String KS_ROOT = "https://www.kerbalstuff.com";
 
         //API String for KerbalStuff
         public static String KS_API = KS_ROOT + "/api";
