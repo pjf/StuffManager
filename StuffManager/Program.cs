@@ -19,7 +19,7 @@ namespace StuffManager
         {
             if (args.Length == 0)
             {
-                Console.WriteLine("Try running `stuff --help`");
+                Console.WriteLine("Try running `stuff help`");
                 return 1;
             }
             var command = args[0];
@@ -49,8 +49,19 @@ namespace StuffManager
                     return ChangelogCommand.HandleCommandLine(shifted, options);
                 case "download":
                     return DownloadCommand.HandleCommandLine(shifted, options);
+				case "help":
+					Console.WriteLine (
+						"\nStuffManager Commands:\n\n" +
+						"\tsearch    -- Search KerbalStuff\n" +
+						"\tksp       -- Run KSP\n" +
+						"\tinfo      -- Provide info about a mod\n" +
+						"\tchangelog -- Display a mod's changelog\n" +
+						"\tdownload  -- Download a mod\n" +
+						"\thelp      -- Display this help\n"
+					);
+					return 0;
             }
-            Console.WriteLine("Command not found. Try `stuff --help`.");
+            Console.WriteLine("Command not found. Try `stuff help`.");
             return 1;
         }
     }
